@@ -18,7 +18,9 @@ Under development
 @include split(50%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
 ```
 
-## Example Will result in a _fixed | fluid | fixed_ grid.
+## Example 
+
+Will result in a _fixed | fluid | fixed_ grid.
 
 **HTML**
 
