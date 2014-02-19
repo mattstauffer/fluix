@@ -1,6 +1,6 @@
 # Fluix
 
-Under development
+Semantic SCSS fluid/fixed grid mixn - Under development
 
 ## Usage
 ```scss
