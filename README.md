@@ -73,10 +73,12 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 .author {
 	@include split(5em, 100%) {
 		.avatar {
-			img { width:100% }
+			img { 
+				// do stuff
+			}
 		}
 		.name {
-			font-weight:bold;
+			// do stuff
 		}
 	}
 }
