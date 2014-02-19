@@ -2,6 +2,22 @@
 
 Under development
 
+## Usage
+```scss
+
+// Only fluid
+@include split(50%, 50%){}
+
+// Only fixed
+@include split(10em, 10em){}
+
+// Mixed arguments
+@include split(50%, 1em){}
+
+// Unlimited columns
+@include split(50%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
+
+
 ## Example HTML
 ```html
 <div class="whatever-wrapper">
@@ -37,17 +53,3 @@ Will result in a _fixed | fluid | fixed_ grid
 }
 ```
 
-## Other usage
-```scss
-
-// Only fluid
-@include split(50%, 50%){}
-
-// Only fixed
-@include split(10em, 10em){}
-
-// Mixed arguments
-@include split(50%, 1em){}
-
-// Unlimited columns
-@include split(50%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
