@@ -73,9 +73,7 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 .author {
 	@include split(5em, 100%) {
 		.avatar {
-			img { 
-				// do stuff
-			}
+			// do stuff
 		}
 		.name {
 			// do stuff
