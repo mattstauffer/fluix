@@ -56,4 +56,28 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 }
 ```
 
+## Real live Example
 
+```html
+<div class="author">
+	<div class="avatar">
+		<img src="/avatar.jpg">
+	</div>
+	<div class="name">
+		John Doe
+	</div>
+</div>
+```
+
+```scss
+.author {
+	@include split(5em, 100%) {
+		.avatar {
+			img { width:100% }
+		}
+		.name {
+			font-weight:bold;
+		}
+	}
+}
+```
