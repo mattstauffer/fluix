@@ -28,6 +28,4 @@
 ```
 
 ## Output
-```
-	http://dev.j3rn.org/
-```
+http://dev.j3rn.org/
