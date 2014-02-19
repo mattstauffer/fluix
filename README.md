@@ -13,7 +13,7 @@ Under development
 
 ## Example SCSS 
 
-Will result in a fixed | fluid | fixed grid
+Will result in a _fixed | fluid | fixed_ grid
 
 ```scss
 .whatever-wrapper {
