@@ -1,5 +1,6 @@
 # Fluix
 
+Under development
 
 ## Example HTML
 ```html
@@ -11,7 +12,9 @@
 ```
 
 ## Example SCSS 
+
 Will result in a fixed | fluid | fixed grid
+
 ```scss
 .whatever-wrapper {
 	@include split(10em, 100%, 10em) {
