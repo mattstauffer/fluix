@@ -18,7 +18,7 @@ Under development
 @include split(100%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
 ```
 
-## Example 
+## Example
 
 Will result in a 3 column _fixed | fluid | fixed_ grid.
 
