@@ -3,11 +3,11 @@
 
 ## Example HTML
 ´´´
-    <div class="whatever-wrapper">
-        <div class="whatever">1</div>
-        <div class="whatever-foo">2</div>
-        <div class="whatever-bar">3</div>
-    </div>
+<div class="whatever-wrapper">
+    <div class="whatever">1</div>
+    <div class="whatever-foo">2</div>
+    <div class="whatever-bar">3</div>
+</div>
 ´´´
 
 ## Example SCSS
