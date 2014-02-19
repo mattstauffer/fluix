@@ -1,9 +1,9 @@
+@import 'dist/clearfix';
+@import 'dist/fluix';
+
 body {
 	font-size: 22px;
 }
-
-@import 'clearfix';
-@import 'fluix';
 
 .whatever-wrapper {
 	@include split(10em, 100%, 10em) {
@@ -18,4 +18,3 @@ body {
 		}
 	}	
 }
-
