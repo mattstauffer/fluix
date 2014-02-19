@@ -46,7 +46,7 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 			// add scss
 		}
 
-		// Fluid column of 100%
+		// Fluid column of 100% (fills remaining space)
 		.whatever-foo {
 			// add scss
 		}
