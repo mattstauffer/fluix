@@ -18,7 +18,10 @@ Under development
 @include split(50%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
 ```
 
-## Example HTML
+## Example Will result in a _fixed | fluid | fixed_ grid.
+
+**HTML**
+
 ```html
 <div class="whatever-wrapper">
     <div class="whatever">1</div>
@@ -27,9 +30,7 @@ Under development
 </div>
 ```
 
-## Example SCSS 
-
-Will result in a _fixed | fluid | fixed_ grid
+**SCSS**
 
 ```scss
 .whatever-wrapper {
@@ -52,4 +53,5 @@ Will result in a _fixed | fluid | fixed_ grid
 	}	
 }
 ```
+
 
