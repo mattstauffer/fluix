@@ -12,7 +12,7 @@ Under development
 @include split(10em, 10em){}
 
 // Mixed arguments
-@include split(50%, 1em){}
+@include split(100%, 1em){}
 
 // Unlimited columns
 @include split(50%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
