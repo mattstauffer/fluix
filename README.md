@@ -2,6 +2,8 @@
 
 Semantic SCSS fluid/fixed grid mixn - Under development
 
+Issues: https://github.com/jeroengerits/fluix/issues
+
 ## Usage
 ```scss
 
