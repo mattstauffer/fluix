@@ -1,0 +1,66 @@
+// TODO: @warn if em ems and px are used in the same list
+// 
+
+body {
+	font-size: 22px;
+}
+
+@mixin clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020"; 
+        display: block; 
+        height: 0; 
+        overflow: hidden; 
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin split($options...) {
+	@include clearfix();
+	$totalFixedWidth: 0;
+	$counter: 0;
+	@each $option in $options {
+		@if unit($option) == 'em' {
+			$totalFixedWidth: $totalFixedWidth + $option;
+		}
+	}
+	@each $option in $options {
+		$counter: $counter + 1;
+		@if unit($option) == 'em' {
+			:nth-child(#{$counter}) {
+				box-sizing: border-box;
+				width: $option;
+				float: left;
+			}
+		} @else if unit($option) == '%' {
+			:nth-child(#{$counter}) {
+				box-sizing: border-box;
+				float: left;
+				@if $totalFixedWidth == 0 {
+					width: $option;
+				} @else {
+					width: calc(#{$option} - #{$totalFixedWidth});
+				}
+			}
+		}
+	}
+	@content;
+}
+
+.whatever-wrapper {
+	@include split(10em, 100%, 10em) {
+		.whatever {
+			background: red;
+		}
+		.whatever-foo {
+			background: blue;
+		}
+		.whatever-bar {
+			background: yellow;
+		}
+	}	
+}
+
