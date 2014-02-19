@@ -1,22 +1,33 @@
 # Fluix
 
-Semantic SCSS fluid/fixed grid mixn - Under development
+A Sass/SCSS mixin for quickly and simply generating mixed fluid/fixed grids. Under active development.
 
 Issues: https://github.com/jeroengerits/fluix/issues
 
-## Usage
+## General Usage
 ```scss
+// Wrap columns with the split; the number of arguments to split should be
+// the same as the number of columns.
+@include split(10em, 100%) {
+	.fixed-width-left-column {
+	}
+	.fluid-width-right-column {
+	}
+}
+```
 
-// Only fluid
+## Usage Options
+```scss
+// Only fluid columns
 @include split(50%, 50%){}
 
-// Only fixed
+// Only fixed columns
 @include split(10em, 10em){}
 
-// Mixed arguments
+// Mixed columns
 @include split(100%, 1em){}
 
-// Unlimited columns
+// Many columns
 @include split(100%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
 
 // Multiple fluid and fixed column sizes
@@ -86,3 +97,6 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 	}
 }
 ```
+
+## Compatibility note
+Combining fluid and fixed widths requires CSS calc(), which is unavailable on IE < 9.
