@@ -16,6 +16,9 @@ Under development
 
 // Unlimited columns
 @include split(100%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
+
+// Multiple fluid and fixed column sizes
+@include split(30%, 70%, 1em, 5em){}
 ```
 
 ## Example
