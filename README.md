@@ -18,17 +18,17 @@ Will result in a fixed | fluid | fixed grid
 
 		// Fixed column of 10em
 		.whatever {
-			background: red;
+			// add scss
 		}
 
 		// Fluid column of 100%
 		.whatever-foo {
-			background: blue;
+			// add scss
 		}
 
 		// Fixed column of 10em
 		.whatever-bar {
-			background: yellow;
+			// add scss
 		}
 	}	
 }
