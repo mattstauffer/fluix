@@ -16,7 +16,7 @@ Under development
 
 // Unlimited columns
 @include split(50%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
-
+```
 
 ## Example HTML
 ```html
