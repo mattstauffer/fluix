@@ -46,6 +46,8 @@ Will result in a _fixed | fluid | fixed_ grid
 // Only fixed
 @include split(10em, 10em){}
 
-// Unlimited columns and mixed arguments
-@include split(50%, 50%, 1em, 1em, 1em, 1em, 1em){}
+// Mixed arguments
+@include split(50%, 1em){}
 
+// Unlimited columns
+@include split(50%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
