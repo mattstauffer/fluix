@@ -11,7 +11,7 @@
 ```
 
 ## Example SCSS
-```
+```scss
 .whatever-wrapper {
 	@include split(10em, 100%, 10em) {
 
@@ -24,7 +24,7 @@
 		.whatever-foo {
 			background: blue;
 		}
-		
+
 		// Fixed column of 10em
 		.whatever-bar {
 			background: yellow;
