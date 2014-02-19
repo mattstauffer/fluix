@@ -14,12 +14,18 @@
 ```
 .whatever-wrapper {
 	@include split(10em, 100%, 10em) {
+
+		// Fixed column of 10em
 		.whatever {
 			background: red;
 		}
+
+		// Fluid column of 100% remaining
 		.whatever-foo {
 			background: blue;
 		}
+		
+		// Fixed column of 10em
 		.whatever-bar {
 			background: yellow;
 		}
