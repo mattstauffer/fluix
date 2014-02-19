@@ -20,7 +20,7 @@ Under development
 
 ## Example 
 
-Will result in a _fixed | fluid | fixed_ grid.
+Will result in a 3 column _fixed | fluid | fixed_ grid.
 
 **HTML**
 
