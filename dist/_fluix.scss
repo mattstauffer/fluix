@@ -57,9 +57,10 @@
                 float: left;
                 width: $width;
             }
-
+        }
+        
         // Set a fluid width column
-        } @else if $widthUnit == '%' {
+        @if $widthUnit == '%' {
             :nth-child(#{$totalColumnCounter}) {
                 box-sizing: border-box;
                 float: left;
@@ -73,7 +74,7 @@
                 @if $fluidColumnCounter > 1 {
                     width: calc(#{$width} - #{$totalFixedWidth / $fluidColumnCounter});
                 }
-                
+
                 // Only 1 fluid column, just deduct the total fixed with
                 width: calc(#{$width} - #{$totalFixedWidth});
 
