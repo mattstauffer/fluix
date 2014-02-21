@@ -37,6 +37,9 @@ Issuse: https://github.com/jeroengerits/fluix/issues
 @include split(30%, 70%, 1em, 5em){}
 @include split(30%, 70%, 50px, 100px){}
 @include split(30%, 70%, 1rem, 5rem){}
+
+@include split(30%, 3em, 1rem, 10px){} // Invalid
+
 ```
 
 ## Example
