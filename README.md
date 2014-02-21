@@ -2,7 +2,7 @@
 
 A Sass/SCSS mixin for quickly and simply generating mixed fluid/fixed grids. Under active development.
 
-Issuse: https://github.com/jeroengerits/fluix/issues
+Issues: https://github.com/jeroengerits/fluix/issues?state=open
 
 ## General Usage
 ```scss
