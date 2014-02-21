@@ -95,6 +95,7 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 ```
 
 ```scss
+## Nesting syntax
 .author {
 	@include split(5em, 100%) {
 		.avatar {
