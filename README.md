@@ -2,7 +2,7 @@
 
 A Sass/SCSS mixin for quickly and simply generating mixed fluid/fixed grids. Under active development.
 
-Issues: https://github.com/jeroengerits/fluix/issues
+Issuse: https://github.com/jeroengerits/fluix/issues
 
 ## General Usage
 ```scss
@@ -32,6 +32,11 @@ Issues: https://github.com/jeroengerits/fluix/issues
 
 // Multiple fluid and fixed column sizes
 @include split(30%, 70%, 1em, 5em){}
+
+// EM, REM and PX support (not mixed)
+@include split(30%, 70%, 1em, 5em){}
+@include split(30%, 70%, 50px, 100px){}
+@include split(30%, 70%, 1rem, 5rem){}
 ```
 
 ## Example
