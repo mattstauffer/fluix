@@ -19,7 +19,9 @@
         }
 
         // Sum the total of all fixed widths
-        @if unit($width) == 'em' or unit($width) == 'rem' or unit($width) == 'px' {
+        @if unit($width) == 'em' 
+            or unit($width) == 'rem' 
+            or unit($width) == 'px' {
             $totalFixedWidth: $totalFixedWidth + $width;
         }
 
@@ -40,7 +42,9 @@
         $counter: $counter + 1;
 
         // Set a fixed width column
-        @if unit($width) == 'em' or unit($width) == 'rem' or unit($width) == 'px' {
+        @if unit($width) == 'em' 
+            or unit($width) == 'rem' 
+            or unit($width) == 'px' {
             :nth-child(#{$counter}) {
                 box-sizing: border-box;
                 width: $width;
