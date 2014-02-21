@@ -79,6 +79,12 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 		}
 	}	
 }
+
+// Alternative non-nesting syntax
+.whatever-wrapper {
+	@include split(10em, 100%, 10em);
+	.whatever {}
+}
 ```
 
 ## Real live Example
@@ -95,7 +101,6 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 ```
 
 ```scss
-// Nesting syntax
 .author {
 	@include split(5em, 100%) {
 		.avatar {
@@ -104,17 +109,6 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 		.name {
 			// do stuff
 		}
-	}
-}
-
-// Alternative non-nesting syntax
-.author {
-	@include split(5em, 100%);
-	.avatar {
-		// do stuff
-	}
-	.name {
-		// do stuff
 	}
 }
 ```

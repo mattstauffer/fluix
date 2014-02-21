@@ -54,8 +54,8 @@
          or $widthUnit == 'px' {
             :nth-child(#{$totalColumnCounter}) {
                 box-sizing: border-box;
-                width: $width;
                 float: left;
+                width: $width;
             }
 
         // Set a fluid width column

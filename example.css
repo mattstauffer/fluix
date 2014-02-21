@@ -12,16 +12,16 @@ body {
     clear: both; }
   .whatever-wrapper1 :nth-child(1) {
     box-sizing: border-box;
-    width: 10em;
-    float: left; }
+    float: left;
+    width: 10em; }
   .whatever-wrapper1 :nth-child(2) {
     box-sizing: border-box;
     float: left;
     width: calc(100% - 20em); }
   .whatever-wrapper1 :nth-child(3) {
     box-sizing: border-box;
-    width: 10em;
-    float: left; }
+    float: left;
+    width: 10em; }
   .whatever-wrapper1 .whatever {
     background: red; }
   .whatever-wrapper1 .whatever-foo {
@@ -40,12 +40,12 @@ body {
     clear: both; }
   .whatever-wrapper2 :nth-child(1) {
     box-sizing: border-box;
-    width: 100px;
-    float: left; }
+    float: left;
+    width: 100px; }
   .whatever-wrapper2 :nth-child(2) {
     box-sizing: border-box;
-    width: 70px;
-    float: left; }
+    float: left;
+    width: 70px; }
   .whatever-wrapper2 :nth-child(3) {
     box-sizing: border-box;
     float: left;
