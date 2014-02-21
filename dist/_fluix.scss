@@ -21,8 +21,8 @@
 
         // Sum the total of all fixed widths
         @if unit($width) == 'em' 
-            or unit($width) == 'rem' 
-            or unit($width) == 'px' {
+         or unit($width) == 'rem' 
+         or unit($width) == 'px' {
             $totalFixedWidth: $totalFixedWidth + $width;
         }
 
@@ -45,8 +45,8 @@
 
         // Set a fixed width column
         @if unit($width) == 'em' 
-            or unit($width) == 'rem' 
-            or unit($width) == 'px' {
+         or unit($width) == 'rem' 
+         or unit($width) == 'px' {
             :nth-child(#{$counter}) {
                 box-sizing: border-box;
                 width: $width;
@@ -58,7 +58,6 @@
             :nth-child(#{$counter}) {
                 box-sizing: border-box;
                 float: left;
-                @debug $totalFluidColumns;
 
                 // If there are non fixed width columns set the width exactly as it is passed as a argument
                 @if $totalFixedWidth == 0 {
