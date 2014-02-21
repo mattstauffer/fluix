@@ -58,7 +58,7 @@
                 width: $width;
             }
         }
-        
+
         // Set a fluid width column
         @if $widthUnit == '%' {
             :nth-child(#{$totalColumnCounter}) {
@@ -73,11 +73,10 @@
                 // If there are multiple fluid columns distribute them and deduct the total fixed with
                 @if $fluidColumnCounter > 1 {
                     width: calc(#{$width} - #{$totalFixedWidth / $fluidColumnCounter});
+                } @else {
+                    // Only 1 fluid column, just deduct the total fixed with
+                    width: calc(#{$width} - #{$totalFixedWidth});
                 }
-
-                // Only 1 fluid column, just deduct the total fixed with
-                width: calc(#{$width} - #{$totalFixedWidth});
-
             }
         }
     }
