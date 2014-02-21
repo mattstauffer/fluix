@@ -5,8 +5,22 @@ body {
 	font-size: 22px;
 }
 
-.whatever-wrapper {
+.whatever-wrapper1 {
 	@include split(10em, 100%, 10em) {
+		.whatever {
+			background: red;
+		}
+		.whatever-foo {
+			background: blue;
+		}
+		.whatever-bar {
+			background: yellow;
+		}
+	}	
+}
+
+.whatever-wrapper2 {
+	@include split(100px, 70px, 100%) {
 		.whatever {
 			background: red;
 		}

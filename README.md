@@ -107,5 +107,18 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 }
 ```
 
+## Non-nesting syntax
+```scss
+.author {
+	@include split(5em, 100%);
+	.avatar {
+		// do stuff
+	}
+	.name {
+		// do stuff
+	}
+}
+```
+
 ## Compatibility note
 Combining fluid and fixed widths requires CSS calc(), which is unavailable on IE < 9.

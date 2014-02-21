@@ -1,30 +1,58 @@
 body {
   font-size: 22px; }
 
-.whatever-wrapper {
+.whatever-wrapper1 {
   zoom: 1; }
-  .whatever-wrapper:before, .whatever-wrapper:after {
+  .whatever-wrapper1:before, .whatever-wrapper1:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .whatever-wrapper:after {
+  .whatever-wrapper1:after {
     clear: both; }
-  .whatever-wrapper :nth-child(1) {
+  .whatever-wrapper1 :nth-child(1) {
     box-sizing: border-box;
     width: 10em;
     float: left; }
-  .whatever-wrapper :nth-child(2) {
+  .whatever-wrapper1 :nth-child(2) {
     box-sizing: border-box;
     float: left;
     width: calc(100% - 20em); }
-  .whatever-wrapper :nth-child(3) {
+  .whatever-wrapper1 :nth-child(3) {
     box-sizing: border-box;
     width: 10em;
     float: left; }
-  .whatever-wrapper .whatever {
+  .whatever-wrapper1 .whatever {
     background: red; }
-  .whatever-wrapper .whatever-foo {
+  .whatever-wrapper1 .whatever-foo {
     background: blue; }
-  .whatever-wrapper .whatever-bar {
+  .whatever-wrapper1 .whatever-bar {
+    background: yellow; }
+
+.whatever-wrapper2 {
+  zoom: 1; }
+  .whatever-wrapper2:before, .whatever-wrapper2:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .whatever-wrapper2:after {
+    clear: both; }
+  .whatever-wrapper2 :nth-child(1) {
+    box-sizing: border-box;
+    width: 100px;
+    float: left; }
+  .whatever-wrapper2 :nth-child(2) {
+    box-sizing: border-box;
+    width: 70px;
+    float: left; }
+  .whatever-wrapper2 :nth-child(3) {
+    box-sizing: border-box;
+    float: left;
+    width: calc(100% - 170px); }
+  .whatever-wrapper2 .whatever {
+    background: red; }
+  .whatever-wrapper2 .whatever-foo {
+    background: blue; }
+  .whatever-wrapper2 .whatever-bar {
     background: yellow; }
