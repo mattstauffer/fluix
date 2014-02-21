@@ -10,9 +10,15 @@
 
     // The split is essentially a 'row', so include the clearfix mixin
     @include clearfix();
-
-    // Sum the total of all widths
+    
     @each $width in $widths {
+        
+        // Trow a warning if there is no unit specified
+        @if(unitless($width) == true) {
+            @warn 'Please specify a unit like px, rem, em or %';
+        }
+
+        // Sum the total of all widths
         @if unit($width) == 'em' or unit($width) == 'rem' or unit($width) == 'px' {
             $totalFixedWidth: $totalFixedWidth + $width;
         }
