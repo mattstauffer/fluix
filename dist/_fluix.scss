@@ -1,16 +1,29 @@
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
 @mixin split($widths...) {
 
     $totalFixedWidth : 0;
+    $totalFluidWidth : 0;
     $counter         : 0;
 
     // The split is essentially a 'row', so include the clearfix mixin
     @include clearfix();
 
-    // Sum the total of all fixed based widths
+    // Sum the total of all widths
     @each $width in $widths {
         @if unit($width) == 'em' or unit($width) == 'rem' or unit($width) == 'px' {
             $totalFixedWidth: $totalFixedWidth + $width;
         }
+        @if unit($width) == '%' {
+            $totalFluidWidth: $totalFluidWidth + $width;
+        }        
+    }
+
+    // Trow a warning if the totalFluidWidth exceeds 100%
+    @if(strip-units($totalFluidWidth) > 100) {
+        @warn 'total fluid width exceeds 100%';
     }
 
     // Distribute the columns acording to given width arguments
