@@ -4,9 +4,10 @@
 
 @mixin split($widths...) {
 
-    $totalFixedWidth : 0;
-    $totalFluidWidth : 0;
-    $counter         : 0;
+    $totalFixedWidth   : 0;
+    $totalFluidWidth   : 0;
+    $totalFluidColumns : 0;
+    $counter           : 0;
 
     // The split is essentially a 'row', so include the clearfix mixin
     @include clearfix();
@@ -27,6 +28,7 @@
 
         // Sum the total of all fluid widths
         @if unit($width) == '%' {
+            $totalFluidColumns: $totalFluidColumns + 1;
             $totalFluidWidth: $totalFluidWidth + $width;
         }        
     }
@@ -56,6 +58,7 @@
             :nth-child(#{$counter}) {
                 box-sizing: border-box;
                 float: left;
+                @debug $totalFluidColumns;
 
                 // If there are non fixed width columns set the width exactly as it is passed as a argument
                 @if $totalFixedWidth == 0 {
@@ -63,7 +66,14 @@
 
                 // If there are fixed columns inside the row deduct those from the total fluid width
                 } @else {
-                    width: calc(#{$width} - #{$totalFixedWidth});
+
+                    // Distribute fluid columns and deduct the total fixed with.
+                    @if $totalFluidColumns > 1 {
+                        width: calc(#{$width} - #{$totalFixedWidth / $totalFluidColumns});
+                    
+                    } @else {
+                        width: calc(#{$width} - #{$totalFixedWidth});
+                    }
                 }
             }
         }
