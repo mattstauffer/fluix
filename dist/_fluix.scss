@@ -1,5 +1,5 @@
-@function strip-units($number) {
-    @return $number / ($number * 0 + 1);
+@function strip-units($value) {
+    @return $value / ($value * 0 + 1);
 }
 
 @function is-fixed-unit($unit) {
