@@ -18,10 +18,12 @@
             @warn 'Please specify a unit like px, rem, em or %';
         }
 
-        // Sum the total of all widths
+        // Sum the total of all fixed widths
         @if unit($width) == 'em' or unit($width) == 'rem' or unit($width) == 'px' {
             $totalFixedWidth: $totalFixedWidth + $width;
         }
+
+        // Sum the total of all fluid widths
         @if unit($width) == '%' {
             $totalFluidWidth: $totalFluidWidth + $width;
         }        
