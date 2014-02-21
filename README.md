@@ -33,11 +33,12 @@ Issuse: https://github.com/jeroengerits/fluix/issues
 // Multiple fluid and fixed column sizes
 @include split(30%, 70%, 1em, 5em){}
 
-// EM, REM and PX support (not mixed)
+// EM, REM and PX support
 @include split(100%, 1em, 5em){}
 @include split(100%, 50px, 100px){}
 @include split(100%, 1rem, 5rem){}
 
+// Mixed fixed widths are not supported
 @include split(100%, 3em, 1rem, 10px){} // Invalid
 
 ```
