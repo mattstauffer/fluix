@@ -8,13 +8,7 @@
 
     // Sum the total of all fixed based widths
     @each $width in $widths {
-        @if unit($width) == 'em' {
-            $totalFixedWidth: $totalFixedWidth + $width;
-        }
-        @if unit($width) == 'px' {
-            $totalFixedWidth: $totalFixedWidth + $width;
-        }
-        @if unit($width) == 'rem' {
+        @if unit($width) == 'em' or unit($width) == 'rem' or unit($width) == 'px' {
             $totalFixedWidth: $totalFixedWidth + $width;
         }
     }
