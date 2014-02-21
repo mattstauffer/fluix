@@ -20,7 +20,7 @@ body {
 }
 
 .whatever-wrapper2 {
-	@include split(100px, 70px, 100%) {
+	@include split(40%, 40%, 20%) {
 		.whatever {
 			background: red;
 		}

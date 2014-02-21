@@ -41,15 +41,18 @@ body {
   .whatever-wrapper2 :nth-child(1) {
     box-sizing: border-box;
     float: left;
-    width: 100px; }
+    width: 40%;
+    width: calc(40% - 0); }
   .whatever-wrapper2 :nth-child(2) {
     box-sizing: border-box;
     float: left;
-    width: 70px; }
+    width: 40%;
+    width: calc(40% - 0); }
   .whatever-wrapper2 :nth-child(3) {
     box-sizing: border-box;
     float: left;
-    width: calc(100% - 170px); }
+    width: 20%;
+    width: calc(20% - 0); }
   .whatever-wrapper2 .whatever {
     background: red; }
   .whatever-wrapper2 .whatever-foo {
