@@ -26,7 +26,7 @@
         @if $widthUnit == 'em' 
          or $widthUnit == 'rem' 
          or $widthUnit == 'px' {
-            $fixedColumnCounter: + 1;
+            $fixedColumnCounter: $fixedColumnCounter + 1;
             $totalFixedWidth: $totalFixedWidth + $width;
         }
 
@@ -44,7 +44,7 @@
 
     // Distribute the columns acording to given width arguments
     @each $width in $widths {
-        
+
         $widthUnit: unit($width);
         $totalColumnCounter: $totalColumnCounter + 1;
 
