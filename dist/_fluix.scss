@@ -2,10 +2,18 @@
     @return $number / ($number * 0 + 1);
 }
 
-@function is-fixed($unit) {
+@function is-fixed-unit($unit) {
     @if $unit == 'em' 
      or $unit == 'rem' 
      or $unit == 'px' {
+        @return true;
+    } @else {
+        @return false;
+    }
+}
+
+@function is-fluid-unit($unit) {
+    @if $unit == '%' {
         @return true;
     } @else {
         @return false;
@@ -33,7 +41,7 @@
         }
 
         // Sum the total of all fixed widths
-        @if is-fixed($unit) {
+        @if is-fixed-unit($unit) {
             $fixedColumnCounter: $fixedColumnCounter + 1;
             $totalFixedWidth: $totalFixedWidth + $width;
         }
@@ -57,7 +65,7 @@
         $totalColumnCounter: $totalColumnCounter + 1;
 
         // Set a fixed width column
-        @if is-fixed($unit) {
+        @if is-fixed-unit($unit) {
             :nth-child(#{$totalColumnCounter}) {
                 box-sizing: border-box;
                 float: left;
@@ -66,7 +74,7 @@
         }
 
         // Set a fluid width column
-        @if $unit == '%' {
+        @if is-fluid-unit($unit) {
             :nth-child(#{$totalColumnCounter}) {
                 box-sizing: border-box;
                 float: left;
