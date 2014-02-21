@@ -1,31 +1,50 @@
-@mixin split($options...) {
-	@include clearfix();
-	$totalFixedWidth: 0;
-	$counter: 0;
-	@each $option in $options {
-		@if unit($option) == 'em' {
-			$totalFixedWidth: $totalFixedWidth + $option;
-		}
-	}
-	@each $option in $options {
-		$counter: $counter + 1;
-		@if unit($option) == 'em' {
-			:nth-child(#{$counter}) {
-				box-sizing: border-box;
-				width: $option;
-				float: left;
-			}
-		} @else if unit($option) == '%' {
-			:nth-child(#{$counter}) {
-				box-sizing: border-box;
-				float: left;
-				@if $totalFixedWidth == 0 {
-					width: $option;
-				} @else {
-					width: calc(#{$option} - #{$totalFixedWidth});
-				}
-			}
-		}
-	}
-	@content;
+@mixin split($widths...) {
+
+    $totalFixedWidth : 0;
+    $counter         : 0;
+
+    // The split is essentially a 'row', so include the clearfix mixin
+    @include clearfix();
+
+    // Sum the total of all fixed EM based widths
+    @each $width in $widths {
+        @if unit($width) == 'em' {
+            $totalFixedWidth: $totalFixedWidth + $width;
+        }
+    }
+
+    // Distribute the columns acording to given width arguments
+    @each $width in $widths {
+
+        $counter: $counter + 1;
+
+        // Set a fixed width column
+        @if unit($width) == 'em' {
+            :nth-child(#{$counter}) {
+                box-sizing: border-box;
+                width: $width;
+                float: left;
+            }
+
+        // Set a fluid width column
+        } @else if unit($width) == '%' {
+            :nth-child(#{$counter}) {
+                box-sizing: border-box;
+                float: left;
+
+                // If there are non fixed width columns set the width exactly as it is passed as a argument
+                @if $totalFixedWidth == 0 {
+                    width: $width;
+
+                // If there are fixed columns inside the row deduct those from the total fluid width
+                } @else {
+                    width: calc(#{$width} - #{$totalFixedWidth});
+                }
+            }
+        }
+    }
+
+    // Include the contents of the mixi
+    @content;
+
 }
