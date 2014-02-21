@@ -67,10 +67,11 @@
                 // If there are fixed columns inside the row deduct those from the total fluid width
                 } @else {
 
-                    // Distribute fluid columns and deduct the total fixed with.
+                    // If there are multiple fluid columns distribute them and deduct the total fixed with
                     @if $totalFluidColumns > 1 {
                         width: calc(#{$width} - #{$totalFixedWidth / $totalFluidColumns});
-                    
+                   
+                    // Only 1 fluid column, just deduct the total fixed with
                     } @else {
                         width: calc(#{$width} - #{$totalFixedWidth});
                     }
