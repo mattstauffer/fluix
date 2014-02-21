@@ -6,9 +6,15 @@
     // The split is essentially a 'row', so include the clearfix mixin
     @include clearfix();
 
-    // Sum the total of all fixed EM based widths
+    // Sum the total of all fixed based widths
     @each $width in $widths {
         @if unit($width) == 'em' {
+            $totalFixedWidth: $totalFixedWidth + $width;
+        }
+        @if unit($width) == 'px' {
+            $totalFixedWidth: $totalFixedWidth + $width;
+        }
+        @if unit($width) == 'rem' {
             $totalFixedWidth: $totalFixedWidth + $width;
         }
     }
@@ -19,7 +25,7 @@
         $counter: $counter + 1;
 
         // Set a fixed width column
-        @if unit($width) == 'em' {
+        @if unit($width) == 'em' or unit($width) == 'rem' or unit($width) == 'px' {
             :nth-child(#{$counter}) {
                 box-sizing: border-box;
                 width: $width;
