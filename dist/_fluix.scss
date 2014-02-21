@@ -15,21 +15,23 @@
     
     @each $width in $widths {
         
+        $widthUnit: unit($width);
+
         // Trow a warning if there is no unit specified
         @if(unitless($width) == true) {
             @warn 'Please specify a unit like px, rem, em or %';
         }
 
         // Sum the total of all fixed widths
-        @if unit($width) == 'em' 
-         or unit($width) == 'rem' 
-         or unit($width) == 'px' {
+        @if $widthUnit == 'em' 
+         or $widthUnit == 'rem' 
+         or $widthUnit == 'px' {
             $fixedColumnCounter: + 1;
             $totalFixedWidth: $totalFixedWidth + $width;
         }
 
         // Sum the total of all fluid widths
-        @if unit($width) == '%' {
+        @if $widthUnit == '%' {
             $fluidColumnCounter: $fluidColumnCounter + 1;
             $totalFluidWidth: $totalFluidWidth + $width;
         }        
@@ -42,13 +44,14 @@
 
     // Distribute the columns acording to given width arguments
     @each $width in $widths {
-
+        
+        $widthUnit: unit($width);
         $totalColumnCounter: $totalColumnCounter + 1;
 
         // Set a fixed width column
-        @if unit($width) == 'em' 
-         or unit($width) == 'rem' 
-         or unit($width) == 'px' {
+        @if $widthUnit == 'em' 
+         or $widthUnit == 'rem' 
+         or $widthUnit == 'px' {
             :nth-child(#{$totalColumnCounter}) {
                 box-sizing: border-box;
                 width: $width;
@@ -56,7 +59,7 @@
             }
 
         // Set a fluid width column
-        } @else if unit($width) == '%' {
+        } @else if $widthUnit == '%' {
             :nth-child(#{$totalColumnCounter}) {
                 box-sizing: border-box;
                 float: left;
