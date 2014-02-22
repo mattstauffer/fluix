@@ -1,0 +1,7 @@
+@function is-fluid-unit($unit) {
+    @if $unit == '%' {
+        @return true;
+    } @else {
+        @return false;
+    }
+}

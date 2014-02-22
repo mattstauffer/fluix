@@ -1,0 +1,9 @@
+@function is-fixed-unit($unit) {
+    @if $unit == 'em'
+     or $unit == 'rem'
+     or $unit == 'px' {
+        @return true;
+    } @else {
+        @return false;
+    }
+}

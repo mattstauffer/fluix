@@ -1,24 +1,6 @@
-@function strip-units($value) {
-    @return $value / ($value * 0 + 1);
-}
-
-@function is-fixed-unit($unit) {
-    @if $unit == 'em' 
-     or $unit == 'rem' 
-     or $unit == 'px' {
-        @return true;
-    } @else {
-        @return false;
-    }
-}
-
-@function is-fluid-unit($unit) {
-    @if $unit == '%' {
-        @return true;
-    } @else {
-        @return false;
-    }
-}
+@import 'strip-units';
+@import 'is-fixed-unit';
+@import 'is-fluid-unit';
 
 @mixin split($widths...) {
 
@@ -30,10 +12,10 @@
 
     // The split is essentially a 'row', so include the clearfix mixin
     @include clearfix();
-    
+
     // Sum all the columns based on fixed/fluid
     @each $width in $widths {
-        
+
         // Trow a warning if there is no unit (em, rem, px, %) specified
         @if(unitless($width) == true) {
             @warn 'Please specify a unit like px, rem, em or %';
