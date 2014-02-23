@@ -50,7 +50,7 @@
 
         // Set a fixed width column
         @if is-fixed-unit($unit) {
-            :nth-child(#{$totalColumnCounter}) {
+            > :nth-child(#{$totalColumnCounter}) {
                 box-sizing: border-box;
                 float: left;
                 width: $width;
@@ -59,7 +59,7 @@
 
         // Set a fluid width column
         @if is-fluid-unit($unit) {
-            :nth-child(#{$totalColumnCounter}) {
+            > :nth-child(#{$totalColumnCounter}) {
                 box-sizing: border-box;
                 float: left;
 
