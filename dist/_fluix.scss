@@ -1,7 +1,10 @@
+// Dependencies
 @import 'strip-units';
 @import 'is-fixed-unit';
 @import 'is-fluid-unit';
+@import 'clearfix';
 
+// Module
 @mixin split($widths...) {
 
     $totalFixedWidth    : 0;

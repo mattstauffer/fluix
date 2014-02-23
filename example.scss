@@ -1,4 +1,3 @@
-@import 'dist/clearfix';
 @import 'dist/fluix';
 
 body {
@@ -16,19 +15,16 @@ body {
 		.whatever-bar {
 			background: yellow;
 		}
-	}	
+	}
 }
 
 .whatever-wrapper2 {
-	@include split(40%, 40%, 20%) {
+	@include split(20%, 80%) {
 		.whatever {
 			background: red;
 		}
 		.whatever-foo {
 			background: blue;
 		}
-		.whatever-bar {
-			background: yellow;
-		}
-	}	
+	}
 }
