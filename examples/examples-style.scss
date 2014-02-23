@@ -1,0 +1,26 @@
+html,
+body {
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 1em 2em;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+a {
+    color: #3333dd;
+    text-decoration: none;
+
+    &:hover {
+        color: #1111aa;
+    }
+}
+
+pre {
+    background: #222;
+    padding: 1em;
+    color: #fff;
+}

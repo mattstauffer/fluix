@@ -1,3 +1,4 @@
+@import 'examples-style';
 @import '../dist/fluix';
 
 //---------------------------------------------
@@ -5,6 +6,7 @@
 // fixed-fluid-two-columns.html
 //---------------------------------------------
 .example1-main {
+    margin:0 -2em;
     @include columns(200px, 100%) {
         .example1-navigation {
             background: red;
@@ -20,6 +22,7 @@
 // fluid-fluid-two-columns.html
 //---------------------------------------------
 .example2-main {
+    margin:0 -2em;
     @include columns(50%, 50%) {
         .example2-left {
             background: red;
@@ -36,6 +39,7 @@
 // fixed-fluid-fixed-three-columns.html
 //---------------------------------------------
 .example3-main {
+    margin:0 -2em;
     @include columns(100px, 100%, 100px) {
         .example3-navigation {
             background: red;
