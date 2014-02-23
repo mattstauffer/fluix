@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="examples.css">
+</head>
+<body>
+
+    <p>
+        <a href="index.html">Back to examples</a>
+    </p>
+
+    <h1>Fluix Example #1</h1>
+
+    <h2>Fixed | Fluid, 2 columns</h2>
+    <p>
+        <strong>split(20%, 80%)</strong>
+    </p>
+    <pre>
+.example1-main {
+    <mark>@include split(20%, 80%)</mark> {
+        .example1-navigation {
+            background: red;
+        }
+        .example1-content {
+            background: blue;
+        }
+    }
+}
+    </pre>
+    <div class="example1-main">
+        <div class="example1-navigation">
+            The navigation area (fixed column)
+        </div>
+        <div class="example1-content">
+            The content area (fluid column)
+        </div>
+    </div>
+
+</body>
+</html>

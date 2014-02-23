@@ -1,0 +1,51 @@
+.example1-main {
+  zoom: 1; }
+  .example1-main:before, .example1-main:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .example1-main:after {
+    clear: both; }
+  .example1-main > :nth-child(1) {
+    box-sizing: border-box;
+    float: left;
+    width: 20%;
+    width: calc(20% - 0); }
+  .example1-main > :nth-child(2) {
+    box-sizing: border-box;
+    float: left;
+    width: 80%;
+    width: calc(80% - 0); }
+  .example1-main .example1-navigation {
+    background: red; }
+  .example1-main .example1-content {
+    background: blue; }
+
+.example2-main {
+  zoom: 1; }
+  .example2-main:before, .example2-main:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .example2-main:after {
+    clear: both; }
+  .example2-main > :nth-child(1) {
+    box-sizing: border-box;
+    float: left;
+    width: 100px; }
+  .example2-main > :nth-child(2) {
+    box-sizing: border-box;
+    float: left;
+    width: calc(100% - 200px); }
+  .example2-main > :nth-child(3) {
+    box-sizing: border-box;
+    float: left;
+    width: 100px; }
+  .example2-main .example2-navigation {
+    background: red; }
+  .example2-main .example2-content {
+    background: blue; }
+  .example2-main .example2-aside {
+    background: green; }

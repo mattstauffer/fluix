@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="examples.css">
+</head>
+<body>
+
+    <p>
+        <a href="index.html">Back to examples</a>
+    </p>
+
+    <h1>Fluix Example #2</h1>
+
+    <h2>Fixed | Fluid | Fluid, 3 columns</h2>
+    <p>
+        <strong>split(100px, 100%, 100px)</strong>
+    </p>
+    <pre>
+.example2-main {
+    <mark>@include split(100px, 100%, 100px)</mark> {
+        .example2-navigation {
+            background: red;
+        }
+        .example2-content {
+            background: blue;
+            padding: 1em;
+        }
+        .example2-aside {
+            background: green;
+        }
+    }
+}
+    </pre>
+    <div class="example2-main">
+        <div class="example2-navigation">
+            The navigation area (fixed column)
+        </div>
+        <div class="example2-content">
+            The content area (fluid column)
+        </div>
+        <div class="example2-aside">
+            The content area (fluid column)
+        </div>
+    </div>
+
+</body>
+</html>

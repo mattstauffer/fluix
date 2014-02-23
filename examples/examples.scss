@@ -1,0 +1,35 @@
+@import '../dist/fluix';
+
+//---------------------------------------------
+// Fixed | Fluid two columns
+// fixed-fluid-two-columns.html
+//---------------------------------------------
+.example1-main {
+    @include split(20%, 80%) {
+        .example1-navigation {
+            background: red;
+        }
+        .example1-content {
+            background: blue;
+        }
+    }
+}
+
+
+//---------------------------------------------
+// Fixed | Fluid | Fixed three columns
+// fixed-fluid-fixed-three-columns.html
+//---------------------------------------------
+.example2-main {
+    @include split(100px, 100%, 100px) {
+        .example2-navigation {
+            background: red;
+        }
+        .example2-content {
+            background: blue;
+        }
+        .example2-aside {
+            background: green;
+        }
+    }
+}
