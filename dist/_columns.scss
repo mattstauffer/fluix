@@ -3,9 +3,9 @@
 
     $totalFixedWidth    : 0;
     $totalFluidWidth    : 0;
+    $totalColumnCounter : 0;
     $fluidColumnCounter : 0;
     $fixedColumnCounter : 0;
-    $totalColumnCounter : 0;
 
     // The split is essentially a 'row', so include the clearfix mixin
     @include clearfix();
