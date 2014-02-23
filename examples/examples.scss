@@ -5,11 +5,26 @@
 // fixed-fluid-two-columns.html
 //---------------------------------------------
 .example1-main {
-    @include columns(20%, 80%) {
+    @include columns(200px, 100%) {
         .example1-navigation {
             background: red;
         }
         .example1-content {
+            background: blue;
+        }
+    }
+}
+
+//---------------------------------------------
+// Fluid | Fluid two columns
+// fluid-fluid-two-columns.html
+//---------------------------------------------
+.example2-main {
+    @include columns(50%, 50%) {
+        .example2-left {
+            background: red;
+        }
+        .example2-right {
             background: blue;
         }
     }
@@ -20,15 +35,15 @@
 // Fixed | Fluid | Fixed three columns
 // fixed-fluid-fixed-three-columns.html
 //---------------------------------------------
-.example2-main {
+.example3-main {
     @include columns(100px, 100%, 100px) {
-        .example2-navigation {
+        .example3-navigation {
             background: red;
         }
-        .example2-content {
+        .example3-content {
             background: blue;
         }
-        .example2-aside {
+        .example3-aside {
             background: green;
         }
     }

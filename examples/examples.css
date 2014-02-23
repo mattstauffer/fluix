@@ -10,13 +10,11 @@
   .example1-main > :nth-child(1) {
     box-sizing: border-box;
     float: left;
-    width: 20%;
-    width: calc(20% - 0); }
+    width: 200px; }
   .example1-main > :nth-child(2) {
     box-sizing: border-box;
     float: left;
-    width: 80%;
-    width: calc(80% - 0); }
+    width: calc(100% - 200px); }
   .example1-main .example1-navigation {
     background: red; }
   .example1-main .example1-content {
@@ -34,18 +32,42 @@
   .example2-main > :nth-child(1) {
     box-sizing: border-box;
     float: left;
-    width: 100px; }
+    width: 50%;
+    width: calc(50% - 0); }
   .example2-main > :nth-child(2) {
     box-sizing: border-box;
     float: left;
-    width: calc(100% - 200px); }
-  .example2-main > :nth-child(3) {
+    width: 50%;
+    width: calc(50% - 0); }
+  .example2-main .example2-left {
+    background: red; }
+  .example2-main .example2-right {
+    background: blue; }
+
+.example3-main {
+  zoom: 1; }
+  .example3-main:before, .example3-main:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .example3-main:after {
+    clear: both; }
+  .example3-main > :nth-child(1) {
     box-sizing: border-box;
     float: left;
     width: 100px; }
-  .example2-main .example2-navigation {
+  .example3-main > :nth-child(2) {
+    box-sizing: border-box;
+    float: left;
+    width: calc(100% - 200px); }
+  .example3-main > :nth-child(3) {
+    box-sizing: border-box;
+    float: left;
+    width: 100px; }
+  .example3-main .example3-navigation {
     background: red; }
-  .example2-main .example2-content {
+  .example3-main .example3-content {
     background: blue; }
-  .example2-main .example2-aside {
+  .example3-main .example3-aside {
     background: green; }
