@@ -5,7 +5,7 @@
 // fixed-fluid-two-columns.html
 //---------------------------------------------
 .example1-main {
-    @include split(20%, 80%) {
+    @include columns(20%, 80%) {
         .example1-navigation {
             background: red;
         }
@@ -21,7 +21,7 @@
 // fixed-fluid-fixed-three-columns.html
 //---------------------------------------------
 .example2-main {
-    @include split(100px, 100%, 100px) {
+    @include columns(100px, 100%, 100px) {
         .example2-navigation {
             background: red;
         }
