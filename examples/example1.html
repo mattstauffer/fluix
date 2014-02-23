@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="examples.css">
+</head>
+<body>
+    <p>
+        <a href="index.html">Back to examples</a>
+    </p>
+    <h1>Column Example #1</h1>
+    <h2>Fixed | Fluid, 2 columns</h2>
+    <pre>
+.example1-main {
+    <mark>@include columns(200px, 100%)</mark> {
+        .example1-navigation {
+            background: red;
+        }
+        .example1-content {
+            background: blue;
+        }
+    }
+}
+    </pre>
+    <h2>Results...</h2>
+    <div class="example1-main">
+        <div class="example1-navigation">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <div class="example1-content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+    </div>
+
+</body>
+</html>

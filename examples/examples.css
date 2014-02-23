@@ -80,15 +80,15 @@ pre {
   .example3-main > :nth-child(1) {
     box-sizing: border-box;
     float: left;
-    width: 100px; }
+    width: 300px; }
   .example3-main > :nth-child(2) {
     box-sizing: border-box;
     float: left;
-    width: calc(100% - 200px); }
+    width: calc(100% - 600px); }
   .example3-main > :nth-child(3) {
     box-sizing: border-box;
     float: left;
-    width: 100px; }
+    width: 300px; }
   .example3-main .example3-navigation {
     background: red; }
   .example3-main .example3-content {

@@ -40,7 +40,7 @@
 //---------------------------------------------
 .example3-main {
     margin:0 -2em;
-    @include columns(100px, 100%, 100px) {
+    @include columns(300px, 100%, 300px) {
         .example3-navigation {
             background: red;
         }
