@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="examples.css">
+</head>
+<body>
+    <p>
+        <a href="index.html">Back to examples</a>
+    </p>
+    <h1>Column Example #4</h1>
+    <h2>Fluid, 10 columns</h2>
+    <pre>
+.example4-main {
+    margin:0 -2em;
+    <mark>@include columns(10%, 10%, 10%, 10%, 10%, 10%, 10%, 10%, 10%, 10%)</mark> {
+        text-align: center;
+    }
+}
+    </pre>
+    <h2>Results...</h2>
+    <div class="example4-main">
+        <div class="c1">1</div>
+        <div class="c2">2</div>
+        <div class="c3">3</div>
+        <div class="c4">4</div>
+        <div class="c5">5</div>
+        <div class="c6">6</div>
+        <div class="c7">7</div>
+        <div class="c8">8</div>
+        <div class="c9">9</div>
+        <div class="c10">10</div>
+    </div>
+
+</body>
+</html>

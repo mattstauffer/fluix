@@ -95,3 +95,65 @@ pre {
     background: blue; }
   .example3-main .example3-aside {
     background: green; }
+
+.example4-main {
+  margin: 0 -2em;
+  zoom: 1;
+  text-align: center; }
+  .example4-main:before, .example4-main:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .example4-main:after {
+    clear: both; }
+  .example4-main > :nth-child(1) {
+    box-sizing: border-box;
+    float: left;
+    width: 10%;
+    width: calc(10% - 0); }
+  .example4-main > :nth-child(2) {
+    box-sizing: border-box;
+    float: left;
+    width: 10%;
+    width: calc(10% - 0); }
+  .example4-main > :nth-child(3) {
+    box-sizing: border-box;
+    float: left;
+    width: 10%;
+    width: calc(10% - 0); }
+  .example4-main > :nth-child(4) {
+    box-sizing: border-box;
+    float: left;
+    width: 10%;
+    width: calc(10% - 0); }
+  .example4-main > :nth-child(5) {
+    box-sizing: border-box;
+    float: left;
+    width: 10%;
+    width: calc(10% - 0); }
+  .example4-main > :nth-child(6) {
+    box-sizing: border-box;
+    float: left;
+    width: 10%;
+    width: calc(10% - 0); }
+  .example4-main > :nth-child(7) {
+    box-sizing: border-box;
+    float: left;
+    width: 10%;
+    width: calc(10% - 0); }
+  .example4-main > :nth-child(8) {
+    box-sizing: border-box;
+    float: left;
+    width: 10%;
+    width: calc(10% - 0); }
+  .example4-main > :nth-child(9) {
+    box-sizing: border-box;
+    float: left;
+    width: 10%;
+    width: calc(10% - 0); }
+  .example4-main > :nth-child(10) {
+    box-sizing: border-box;
+    float: left;
+    width: 10%;
+    width: calc(10% - 0); }
