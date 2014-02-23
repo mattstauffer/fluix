@@ -10,15 +10,15 @@ body {
     overflow: hidden; }
   .whatever-wrapper1:after {
     clear: both; }
-  .whatever-wrapper1 :nth-child(1) {
+  .whatever-wrapper1 > :nth-child(1) {
     box-sizing: border-box;
     float: left;
     width: 10em; }
-  .whatever-wrapper1 :nth-child(2) {
+  .whatever-wrapper1 > :nth-child(2) {
     box-sizing: border-box;
     float: left;
     width: calc(100% - 20em); }
-  .whatever-wrapper1 :nth-child(3) {
+  .whatever-wrapper1 > :nth-child(3) {
     box-sizing: border-box;
     float: left;
     width: 10em; }
@@ -38,17 +38,17 @@ body {
     overflow: hidden; }
   .whatever-wrapper2:after {
     clear: both; }
-  .whatever-wrapper2 :nth-child(1) {
+  .whatever-wrapper2 > :nth-child(1) {
     box-sizing: border-box;
     float: left;
     width: 40%;
     width: calc(40% - 0); }
-  .whatever-wrapper2 :nth-child(2) {
+  .whatever-wrapper2 > :nth-child(2) {
     box-sizing: border-box;
     float: left;
     width: 40%;
     width: calc(40% - 0); }
-  .whatever-wrapper2 :nth-child(3) {
+  .whatever-wrapper2 > :nth-child(3) {
     box-sizing: border-box;
     float: left;
     width: 20%;

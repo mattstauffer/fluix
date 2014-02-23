@@ -3,7 +3,6 @@
      or $unit == 'rem'
      or $unit == 'px' {
         @return true;
-    } @else {
-        @return false;
     }
+    @return false;
 }
