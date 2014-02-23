@@ -6,9 +6,8 @@ Issues: https://github.com/jeroengerits/fluix/issues?state=open
 
 ## General Usage
 ```scss
-// Wrap columns with the split; the number of arguments to split should be
-// the same as the number of columns.
-@include split(10em, 100%) {
+// Make a fluid and/or fixed columns.
+@include columns(10em, 100%) {
 	.fixed-width-left-column {
 	}
 	.fluid-width-right-column {
@@ -19,27 +18,27 @@ Issues: https://github.com/jeroengerits/fluix/issues?state=open
 ## Usage Options
 ```scss
 // Only fluid columns
-@include split(50%, 50%){}
+@include columns(50%, 50%){}
 
 // Only fixed columns
-@include split(10em, 10em){}
+@include columns(10em, 10em){}
 
 // Mixed columns
-@include split(100%, 1em){}
+@include columns(100%, 1em){}
 
 // Many columns
-@include split(100%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
+@include columns(100%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
 
 // Multiple fluid and fixed column sizes
-@include split(30%, 70%, 1em, 5em){}
+@include columns(30%, 70%, 1em, 5em){}
 
 // EM, REM and PX support
-@include split(100%, 1em, 5em){}
-@include split(100%, 50px, 100px){}
-@include split(100%, 1rem, 5rem){}
+@include columns(100%, 1em, 5em){}
+@include columns(100%, 50px, 100px){}
+@include columns(100%, 1rem, 5rem){}
 
 // Mixed fixed widths are not supported
-@include split(100%, 3em, 1rem, 10px){} // Invalid
+@include columns(100%, 3em, 1rem, 10px){} // Invalid
 
 ```
 
@@ -61,7 +60,7 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 
 ```scss
 .whatever-wrapper {
-	@include split(10em, 100%, 10em) {
+	@include columns(10em, 100%, 10em) {
 
 		// Fixed column of 10em
 		.whatever {
@@ -77,12 +76,12 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 		.whatever-bar {
 			// add scss
 		}
-	}	
+	}
 }
 
 // Alternative non-nesting syntax
 .whatever-wrapper {
-	@include split(10em, 100%, 10em);
+	@include columns(10em, 100%, 10em);
 	.whatever {}
 }
 ```
@@ -102,7 +101,7 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 
 ```scss
 .author {
-	@include split(5em, 100%) {
+	@include columns(5em, 100%) {
 		.avatar {
 			// do stuff
 		}
