@@ -60,7 +60,9 @@
     }
 }
 
-
+//---------------------------------------------
+// Nested columns
+//---------------------------------------------
 .example6-main {
     margin:0 -2em;
     @include columns(200px, 100%) {
@@ -80,6 +82,21 @@
         }
         .example6-title {
             background: green;
+        }
+    }
+}
+
+.example7-wrapper {
+    margin:0 -2em;
+    .example7-main {
+        border:1px solid red;
+        @include columns(20%, 80%) {
+            .example7-foo {
+                background: yellow;
+            }
+            .example7-bar {
+                background: green;
+            }
         }
     }
 }

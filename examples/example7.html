@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="examples.css">
+</head>
+<body>
+    <p>
+        <a href="index.html">Back to examples</a>
+    </p>
+    <h1>Column Example #7</h1>
+    <h2>Unlimited nested columns</h2>
+    <pre>
+.example7-main {
+    border:1px solid red;
+    <mark>@include columns(20%, 80%)</mark> {
+        .example7-foo {
+            background: yellow;
+        }
+        .example7-bar {
+            background: green;
+        }
+    }
+}
+    </pre>
+    <h2>Results...</h2>
+    <div class="example7-wrapper">
+        <div class="example7-main">
+            <div class="example7-foo">foo</div>
+            <div class="example7-bar">
+                bar
+                <div class="example7-main">
+                    <div class="example7-foo">foo</div>
+                    <div class="example7-bar">
+                        bar
+                        <div class="example7-main">
+                            <div class="example7-foo">foo</div>
+                            <div class="example7-bar">
+                                bar
+                                <div class="example7-main">
+                                    <div class="example7-foo">foo</div>
+                                    <div class="example7-bar">
+                                        bar
+                                        <div class="example7-main">
+                                            <div class="example7-foo">foo</div>
+                                            <div class="example7-bar">
+                                                bar</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

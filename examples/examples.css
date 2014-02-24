@@ -203,3 +203,30 @@ pre {
     background: yellow; }
   .example6-content-item .example6-title {
     background: green; }
+
+.example7-wrapper {
+  margin: 0 -2em; }
+  .example7-wrapper .example7-main {
+    border: 1px solid red;
+    zoom: 1; }
+    .example7-wrapper .example7-main:before, .example7-wrapper .example7-main:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    .example7-wrapper .example7-main:after {
+      clear: both; }
+    .example7-wrapper .example7-main > :nth-child(1) {
+      box-sizing: border-box;
+      float: left;
+      width: 20%;
+      width: calc(20% - 0); }
+    .example7-wrapper .example7-main > :nth-child(2) {
+      box-sizing: border-box;
+      float: left;
+      width: 80%;
+      width: calc(80% - 0); }
+    .example7-wrapper .example7-main .example7-foo {
+      background: yellow; }
+    .example7-wrapper .example7-main .example7-bar {
+      background: green; }
