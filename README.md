@@ -88,7 +88,7 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 
 ## Examples
 
-Check more examples in this repository onder /examples.
+Check more examples in the /examples folder.
 
 ## Compatibility note
 Combining fluid and fixed widths requires CSS calc(), which is unavailable on IE < 9.
