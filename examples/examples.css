@@ -157,3 +157,49 @@ pre {
     float: left;
     width: 10%;
     width: calc(10% - 0); }
+
+.example6-main {
+  margin: 0 -2em;
+  zoom: 1; }
+  .example6-main:before, .example6-main:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .example6-main:after {
+    clear: both; }
+  .example6-main > :nth-child(1) {
+    box-sizing: border-box;
+    float: left;
+    width: 200px; }
+  .example6-main > :nth-child(2) {
+    box-sizing: border-box;
+    float: left;
+    width: calc(100% - 200px); }
+  .example6-main .example6-aside {
+    background: red; }
+  .example6-main .example6-content {
+    background: blue;
+    padding: .5em; }
+
+.example6-content-item {
+  zoom: 1; }
+  .example6-content-item:before, .example6-content-item:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .example6-content-item:after {
+    clear: both; }
+  .example6-content-item > :nth-child(1) {
+    box-sizing: border-box;
+    float: left;
+    width: 100px; }
+  .example6-content-item > :nth-child(2) {
+    box-sizing: border-box;
+    float: left;
+    width: calc(100% - 100px); }
+  .example6-content-item .example6-avatar {
+    background: yellow; }
+  .example6-content-item .example6-title {
+    background: green; }

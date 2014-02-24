@@ -59,3 +59,27 @@
         text-align: center;
     }
 }
+
+
+.example6-main {
+    margin:0 -2em;
+    @include columns(200px, 100%) {
+        .example6-aside {
+            background:red;
+        }
+        .example6-content {
+            background: blue;
+            padding: .5em;
+        }
+    }
+}
+.example6-content-item {
+    @include columns(100px, 100%) {
+        .example6-avatar {
+            background: yellow;
+        }
+        .example6-title {
+            background: green;
+        }
+    }
+}

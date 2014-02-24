@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="examples.css">
+</head>
+<body>
+    <p>
+        <a href="index.html">Back to examples</a>
+    </p>
+    <h1>Column Example #6</h1>
+    <h2>Nested columns</h2>
+    <pre>
+.example6-main {
+    <mark>@include columns(200px, 100%)</mark> {
+        .example6-aside {
+            background:red;
+        }
+        .example6-content {
+            background: blue;
+            padding: .5em;
+        }
+    }
+}
+.example6-content-item {
+    <mark>@include columns(100px, 100%)</mark> {
+        .example6-avatar {
+            background: yellow;
+        }
+        .example6-title {
+            background: green;
+        }
+    }
+}
+    </pre>
+    <h2>Results...</h2>
+    <div class="example6-main">
+        <div class="example6-aside">
+            aside
+        </div>
+        <div class="example6-content">
+            content
+            <div class="example6-content-item">
+                <div class="example6-avatar">
+                    avatar
+                </div>
+                <div class="example6-title">
+                    title
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
