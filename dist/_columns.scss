@@ -1,5 +1,9 @@
-// Module
-@mixin columns($widths...) {
+///////////////////
+// Column module //
+///////////////////
+
+@mixin columns($widths...)
+{
 
     $totalFixedWidth    : 0;
     $totalFluidWidth    : 0;
@@ -12,24 +16,29 @@
     // floats before and after each 'row'.
     @include clearfix();
 
-    // Sum all the columns based on fixed/fluid
-    @each $width in $widths {
+    // Loop all the width arguments and set the calculate the total width and
+    // columns
+    @each $width in $widths
+    {
 
         // Trow a warning if there is no unit (em, rem, px, %) specified
-        @if(unitless($width) == true) {
+        @if(unitless($width) == true)
+        {
             @warn 'Please specify a unit like px, rem, em or %';
         }
 
         $unit: unit($width);
 
         // Sum the total of all fixed width units and increment the counter
-        @if is-fixed-unit($unit) {
+        @if is-fixed-unit($unit)
+        {
             $fixedColumnCounter: $fixedColumnCounter + 1;
             $totalFixedWidth: $totalFixedWidth + $width;
         }
 
         // Sum the total of all fluid width units and increment the counter
-        @if is-fluid-unit($unit) {
+        @if is-fluid-unit($unit)
+        {
             $fluidColumnCounter: $fluidColumnCounter + 1;
             $totalFluidWidth: $totalFluidWidth + $width;
         }
@@ -37,19 +46,23 @@
     }
 
     // Trow a warning if the totalFluidWidth exceeds 100%
-    @if(strip-units($totalFluidWidth) > 100) {
+    @if(strip-units($totalFluidWidth) > 100)
+    {
         @warn 'total fluid width exceeds 100%';
     }
 
     // Distribute the columns acording to given width arguments
-    @each $width in $widths {
+    @each $width in $widths
+    {
 
         $unit: unit($width);
         $totalColumnCounter: $totalColumnCounter + 1;
 
         // Set a fixed width column
-        @if is-fixed-unit($unit) {
-            > :nth-child(#{$totalColumnCounter}) {
+        @if is-fixed-unit($unit)
+        {
+            > :nth-child(#{$totalColumnCounter})
+            {
                 box-sizing: border-box;
                 float: left;
                 width: $width;
@@ -57,18 +70,24 @@
         }
 
         // Set a fluid width column
-        @if is-fluid-unit($unit) {
-            > :nth-child(#{$totalColumnCounter}) {
+        @if is-fluid-unit($unit)
+        {
+            > :nth-child(#{$totalColumnCounter})
+            {
                 box-sizing: border-box;
                 float: left;
 
-                // If there are non fixed width columns set the width exactly as it is passed as a argument
-                @if $totalFixedWidth == 0 {
+                // If there are non fixed width columns set the width exactly
+                // as it is passed as a argument
+                @if $totalFixedWidth == 0
+                {
                     width: $width;
                 }
 
-                // If there are multiple fluid columns distribute them and deduct the total fixed with
-                @if $fluidColumnCounter > 1 {
+                // If there are multiple fluid columns
+                @if $fluidColumnCounter > 1
+                {
+                    // Distribute them and deduct the total fixed with
                     width: calc(#{$width} - #{$totalFixedWidth / $fluidColumnCounter});
                 } @else {
                     // Only 1 fluid column, just deduct the total fixed with
@@ -78,7 +97,7 @@
         }
     }
 
-    // Include the contents of the mixi
+    // Include the contents of the mixin
     @content;
 
 }

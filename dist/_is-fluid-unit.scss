@@ -1,5 +1,11 @@
-@function is-fluid-unit($unit) {
-    @if $unit == '%' {
+///////////////////////
+// Fluid unit module //
+///////////////////////
+
+@function is-fluid-unit($unit)
+{
+    @if $unit == '%'
+    {
         @return true;
     }
     @return false;

@@ -1,7 +1,13 @@
-@function is-fixed-unit($unit){
+///////////////////////
+// Fixed unit module //
+///////////////////////
+
+@function is-fixed-unit($unit)
+{
     @if $unit == 'em'
      or $unit == 'rem'
-     or $unit == 'px' {
+     or $unit == 'px'
+    {
         @return true;
     }
     @return false;
