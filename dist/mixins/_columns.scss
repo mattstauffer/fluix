@@ -23,7 +23,7 @@
     @each $width in $widths
     {
 
-        // Trow a warning if there is no unit (em, rem, px, %) specified
+        // Throw a warning if there is no unit (em, rem, px, %) specified
         @if(unitless($width) == true)
         {
             @warn 'Please specify a unit like px, rem, em or %';
@@ -48,13 +48,13 @@
 
     }
 
-    // Trow a warning if the totalFluidWidth exceeds 100%
+    // Throw a warning if the totalFluidWidth exceeds 100%
     @if(strip-unit($totalFluidWidth) > 100)
     {
         @warn 'total fluid width exceeds 100%';
     }
 
-    // Distribute the columns acording to given width arguments
+    // Distribute the columns according to given width arguments
     @each $width in $widths
     {
 
@@ -93,10 +93,10 @@
                 // If there are multiple fluid columns
                 @if $fluidColumnCounter > 1
                 {
-                    // Distribute them and deduct the total fixed with
+                    // Distribute them and deduct the total fixed width
                     width: calc(#{$width} - #{$totalFixedWidth / $fluidColumnCounter});
                 } @else {
-                    // Only 1 fluid column, just deduct the total fixed with
+                    // Only 1 fluid column, just deduct the total fixed width
                     width: calc(#{$width} - #{$totalFixedWidth});
                 }
             }
