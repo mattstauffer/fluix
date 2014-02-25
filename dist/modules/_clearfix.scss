@@ -2,7 +2,7 @@
 // Clearfix module //
 /////////////////////
 
-@mixin clearfix
+%clearfix
 {
     zoom:1;
     &:before, &:after

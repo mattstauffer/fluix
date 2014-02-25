@@ -19,16 +19,18 @@ pre {
   padding: 1em;
   color: #fff; }
 
-.example1-main {
-  margin: 0 -2em;
+.example1-main, .example2-main, .example3-main, .example4-main, .example6-main, .example6-content-item, .example7-wrapper .example7-main {
   zoom: 1; }
-  .example1-main:before, .example1-main:after {
+  .example1-main:before, .example2-main:before, .example3-main:before, .example4-main:before, .example6-main:before, .example6-content-item:before, .example7-wrapper .example7-main:before, .example1-main:after, .example2-main:after, .example3-main:after, .example4-main:after, .example6-main:after, .example6-content-item:after, .example7-wrapper .example7-main:after {
     content: "\0020";
     display: block;
     height: 0;
     overflow: hidden; }
-  .example1-main:after {
+  .example1-main:after, .example2-main:after, .example3-main:after, .example4-main:after, .example6-main:after, .example6-content-item:after, .example7-wrapper .example7-main:after {
     clear: both; }
+
+.example1-main {
+  margin: 0 -2em; }
   .example1-main > :nth-child(1) {
     box-sizing: border-box;
     float: left;
@@ -43,15 +45,7 @@ pre {
     background: blue; }
 
 .example2-main {
-  margin: 0 -2em;
-  zoom: 1; }
-  .example2-main:before, .example2-main:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-  .example2-main:after {
-    clear: both; }
+  margin: 0 -2em; }
   .example2-main > :nth-child(1) {
     box-sizing: border-box;
     float: left;
@@ -68,15 +62,7 @@ pre {
     background: blue; }
 
 .example3-main {
-  margin: 0 -2em;
-  zoom: 1; }
-  .example3-main:before, .example3-main:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-  .example3-main:after {
-    clear: both; }
+  margin: 0 -2em; }
   .example3-main > :nth-child(1) {
     box-sizing: border-box;
     float: left;
@@ -98,15 +84,7 @@ pre {
 
 .example4-main {
   margin: 0 -2em;
-  zoom: 1;
   text-align: center; }
-  .example4-main:before, .example4-main:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-  .example4-main:after {
-    clear: both; }
   .example4-main > :nth-child(1) {
     box-sizing: border-box;
     float: left;
@@ -159,15 +137,7 @@ pre {
     width: calc(10% - 0); }
 
 .example6-main {
-  margin: 0 -2em;
-  zoom: 1; }
-  .example6-main:before, .example6-main:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-  .example6-main:after {
-    clear: both; }
+  margin: 0 -2em; }
   .example6-main > :nth-child(1) {
     box-sizing: border-box;
     float: left;
@@ -182,40 +152,23 @@ pre {
     background: blue;
     padding: .5em; }
 
-.example6-content-item {
-  zoom: 1; }
-  .example6-content-item:before, .example6-content-item:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-  .example6-content-item:after {
-    clear: both; }
-  .example6-content-item > :nth-child(1) {
-    box-sizing: border-box;
-    float: left;
-    width: 100px; }
-  .example6-content-item > :nth-child(2) {
-    box-sizing: border-box;
-    float: left;
-    width: calc(100% - 100px); }
-  .example6-content-item .example6-avatar {
-    background: yellow; }
-  .example6-content-item .example6-title {
-    background: green; }
+.example6-content-item > :nth-child(1) {
+  box-sizing: border-box;
+  float: left;
+  width: 100px; }
+.example6-content-item > :nth-child(2) {
+  box-sizing: border-box;
+  float: left;
+  width: calc(100% - 100px); }
+.example6-content-item .example6-avatar {
+  background: yellow; }
+.example6-content-item .example6-title {
+  background: green; }
 
 .example7-wrapper {
   margin: 0 -2em; }
   .example7-wrapper .example7-main {
-    border: 1px solid red;
-    zoom: 1; }
-    .example7-wrapper .example7-main:before, .example7-wrapper .example7-main:after {
-      content: "\0020";
-      display: block;
-      height: 0;
-      overflow: hidden; }
-    .example7-wrapper .example7-main:after {
-      clear: both; }
+    border: 1px solid red; }
     .example7-wrapper .example7-main > :nth-child(1) {
       box-sizing: border-box;
       float: left;

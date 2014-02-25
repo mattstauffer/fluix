@@ -1,5 +1,5 @@
 ///////////////////
-// Column module //
+// Columns mixin //
 ///////////////////
 
 @mixin columns($widths...)
@@ -10,11 +10,13 @@
     $totalColumnCounter : 0;
     $fluidColumnCounter : 0;
     $fixedColumnCounter : 0;
+    $unit               : 0;
+    $width              : 0;
 
     // The columns mixin is essentially a 'row' that consist of
-    // a few columns, so include the clearfix mixin to clear the
+    // a few columns, so include the clearfix module to clear the
     // floats before and after each 'row'.
-    @include clearfix();
+    @extend %clearfix;
 
     // Loop all the width arguments and set the calculate the total width and
     // columns
@@ -27,6 +29,7 @@
             @warn 'Please specify a unit like px, rem, em or %';
         }
 
+        // Set the used unit for this width (em, rem, px, %)
         $unit: unit($width);
 
         // Sum the total of all fixed width units and increment the counter
@@ -46,7 +49,7 @@
     }
 
     // Trow a warning if the totalFluidWidth exceeds 100%
-    @if(strip-units($totalFluidWidth) > 100)
+    @if(strip-unit($totalFluidWidth) > 100)
     {
         @warn 'total fluid width exceeds 100%';
     }

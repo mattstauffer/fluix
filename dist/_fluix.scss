@@ -1,5 +1,10 @@
-@import 'clearfix';
-@import 'strip-units';
-@import 'is-fixed-unit';
-@import 'is-fluid-unit';
-@import 'columns';
+// Functions
+@import 'functions/strip-unit';
+@import 'functions/is-fixed-unit';
+@import 'functions/is-fluid-unit';
+
+// Mixins
+@import 'mixins/columns';
+
+// Modules
+@import 'modules/clearfix';
