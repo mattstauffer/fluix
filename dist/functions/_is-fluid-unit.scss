@@ -4,9 +4,5 @@
 
 @function is-fluid-unit($unit)
 {
-    @if $unit == '%'
-    {
-        @return true;
-    }
-    @return false;
+    @return $unit == '%';
 }
