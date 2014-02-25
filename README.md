@@ -6,7 +6,7 @@ Issues: https://github.com/jeroengerits/fluix/issues?state=open
 
 ## General Usage
 ```scss
-// Make a fluid and/or fixed columns.
+// Mix fluid and fixed columns
 @include columns(10em, 100%) {
 	.fixed-width-left-column {
 	}
@@ -18,27 +18,27 @@ Issues: https://github.com/jeroengerits/fluix/issues?state=open
 ## Usage Options
 ```scss
 // Only fluid columns
-@include columns(50%, 50%){}
+@include columns(50%, 50%) {}
 
 // Only fixed columns
-@include columns(10em, 10em){}
+@include columns(10em, 10em) {}
 
 // Mixed columns
-@include columns(100%, 1em){}
+@include columns(100%, 1em) {}
 
 // Many columns
-@include columns(100%, 1em, 1em, 1em, 1em, 1em, 1em, 1em){}
+@include columns(100%, 1em, 1em, 1em, 1em, 1em, 1em, 1em) {}
 
 // Multiple fluid and fixed column sizes
-@include columns(30%, 70%, 1em, 5em){}
+@include columns(30%, 70%, 1em, 5em) {}
 
 // EM, REM and PX support
-@include columns(100%, 1em, 5em){}
-@include columns(100%, 50px, 100px){}
-@include columns(100%, 1rem, 5rem){}
+@include columns(100%, 1em, 5em) {}
+@include columns(100%, 50px, 100px) {}
+@include columns(100%, 1rem, 5rem) {}
 
-// Mixed fixed widths are not supported
-@include columns(100%, 3em, 1rem, 10px){} // Invalid
+// Mixing fixed width units is not supported
+@include columns(100%, 3em, 1rem, 10px) {} // Invalid
 
 ```
 
@@ -91,4 +91,5 @@ Will result in a 3 column _fixed | fluid | fixed_ grid.
 Check more examples in the /examples folder.
 
 ## Compatibility note
+
 Combining fluid and fixed widths requires CSS calc(), which is unavailable on IE < 9.
