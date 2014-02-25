@@ -29,7 +29,7 @@
             @warn 'Please specify a unit like px, rem, em or %';
         }
 
-        // Set the used unit for this width (em, rem, px, %)
+        // Get the used unit for the width (em, rem, px, %)
         $unit: unit($width);
 
         // Sum the total of all fixed width units and increment the counter
@@ -58,7 +58,10 @@
     @each $width in $widths
     {
 
+        // Get the used unit for the width (em, rem, px, %)
         $unit: unit($width);
+
+        // Increment the counter
         $totalColumnCounter: $totalColumnCounter + 1;
 
         // Set a fixed width column
